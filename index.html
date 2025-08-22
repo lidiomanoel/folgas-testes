@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folgas por Turma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Folgas por Turma</h1>
+    
+    <div>
+        <label for="turma">Selecione sua turma:</label>
+        <select id="turma" required>
+            <option value="">-- Escolha uma turma --</option>
+            <option value="A">Turma A</option>
+            <option value="B">Turma B</option>
+            <option value="C">Turma C</option>
+            <option value="D">Turma D</option>
+        </select>
+    </div>
+    
+    <div id="notification" class="notification"></div>
+    
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #ffebee;"></div>
+            <span>Trabalho</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #e8f5e9;"></div>
+            <span>Folga</span>
+        </div>
+    </div>
+    
+    <div class="month-selector">
+        <button id="prevMonth">&lt; Mês Anterior</button>
+        <h2 id="monthYear">JULHO 2025</h2>
+        <button id="nextMonth">Próximo Mês &gt;</button>
+    </div>
+    
+    <table class="calendar" id="calendar">
+        <thead>
+            <tr>
+                <th>Dom</th>
+                <th>Seg</th>
+                <th>Ter</th>
+                <th>Qua</th>
+                <th>Qui</th>
+                <th>Sex</th>
+                <th>Sáb</th>
+            </tr>
+        </thead>
+        <tbody id="calendarBody"></tbody>
+    </table>
+    
+    <footer>
+        Lídio Manoel - 2025 Todos os direitos reservados
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
