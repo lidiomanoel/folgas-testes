@@ -49,7 +49,7 @@ const hoje = new Date();
 let mesAtual = hoje.getMonth(); // 0-11 (janeiro-dezembro)
 let anoAtual = hoje.getFullYear();
 
-// Variável para armazenar a turma selecionada
+// Variável para armazenar la turma selecionada
 let turmaSelecionada = '';
 
 // Variável para controlar o modo escuro
@@ -209,7 +209,7 @@ function renderCalendar() {
                 // Células vazias após o último dia do mês
                 cell.textContent = '';
             } else {
-                // Preenche com o dia do mês
+                // Preenche with o dia do mês
                 const dayNumber = document.createElement('div');
                 dayNumber.className = 'day-number';
                 dayNumber.textContent = date;

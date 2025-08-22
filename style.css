@@ -156,6 +156,7 @@ body.dark-mode .theme-toggle {
     width: 15px;
     height: 15px;
     border: 1px solid #ddd;
+    transition: background-color 0.3s;
 }
 #turma {
     padding: 8px;
