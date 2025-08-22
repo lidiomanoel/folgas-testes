@@ -1,11 +1,5 @@
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/fontes/Quicksand-VariableFont_wght.ttf') format('ttf');
-  font-style: normal;
-}
-
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 0 auto;
     padding: 15px;
