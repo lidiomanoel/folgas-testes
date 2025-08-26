@@ -127,7 +127,7 @@ function toggleDarkMode() {
     
     // Atualiza o ícone do botão
     const themeToggle = document.getElementById('themeToggle');
-    themeToggle.textContent = darkMode ? '🌙' : '☀️';
+    themeToggle.textContent = darkMode ? '☀️' : '🌙';
     
     // Salva a preferência
     saveData();
