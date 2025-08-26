@@ -127,7 +127,7 @@ function toggleDarkMode() {
     
     // Atualiza o ícone do botão
     const themeToggle = document.getElementById('themeToggle');
-    themeToggle.textContent = darkMode ? '☀️' : '🌙';
+    themeToggle.textContent = darkMode ? '🌙' : '☀️';
     
     // Salva a preferência
     saveData();
@@ -168,7 +168,7 @@ function loadSavedData() {
         if (data.darkMode) {
             darkMode = data.darkMode;
             document.body.classList.add('dark-mode');
-            document.getElementById('themeToggle').textContent = '☀️';
+            document.getElementById('themeToggle').textContent = '🌙';
         }
         
         // Preenche o menu suspenso com os dados salvos
