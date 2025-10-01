@@ -1,5 +1,23 @@
 // Folgas fixas para cada turma (junho a dezembro de 2025)
 const folgasPorTurmaEMes = {
+    '2025-6': { // Junho 2025
+        'A': [1, 2, 9, 10, 17, 18, 25, 26],
+        'B': [3, 4, 11, 15, 19, 20, 27, 28],
+        'C': [5, 6, 13, 14, 21, 22, 29, 30],
+        'D': [7, 8, 12, 16, 23, 24]
+    },
+    '2025-7': { // Julho 2025
+        'A': [3, 4, 11, 12, 19, 20, 24, 28],
+        'B': [5, 6, 10, 14, 21, 22, 29, 30],
+        'C': [7, 8, 15, 16, 23, 27, 31],
+        'D': [1, 2, 9, 13, 17, 18, 25, 26]
+    },
+    '2025-8': { // Agosto 2025
+        'A': [4, 5, 12, 13, 20, 24, 28, 29],
+        'B': [6, 7, 14, 15, 22, 23, 30, 31],
+        'C': [1, 8, 9, 16, 17, 21, 25],
+        'D': [2, 3, 10, 11, 18, 19, 26, 27]
+    },
     '2025-9': { // Setembro 2025
         'A': [5, 6, 13, 14, 18, 22, 29, 30],
         'B': [7, 8, 15, 16, 23, 24],
@@ -20,7 +38,7 @@ const folgasPorTurmaEMes = {
     },
     '2025-12': { // Dezembro 2025
         'A': [2, 3, 10, 14, 18, 19, 26, 27],
-        'B': [4, 5, 12, 13, 20, 21, 29],
+        'B': [4, 5, 12, 13, 20, 21, 25, 29],
         'C': [6, 7, 11, 15, 22, 23, 30, 31],
         'D': [1, 8, 9, 16, 17, 24, 28]
     }
@@ -107,12 +125,17 @@ function toggleDarkMode() {
     darkMode = !darkMode;
     document.body.classList.toggle('dark-mode', darkMode);
     
-    // Atualiza o ícone do botão
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.textContent = darkMode ? '🌙' : '☀️';
+    // Atualiza o ícone do botão baseado no estado atual
+    updateThemeToggleIcon();
     
     // Salva a preferência
     saveData();
+}
+
+// Função para atualizar o ícone do botão de tema
+function updateThemeToggleIcon() {
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.textContent = darkMode ? '☀️' : '🌙';
 }
 
 // Atualiza os botões de navegação (desabilita quando necessário)
@@ -150,8 +173,10 @@ function loadSavedData() {
         if (data.darkMode) {
             darkMode = data.darkMode;
             document.body.classList.add('dark-mode');
-            document.getElementById('themeToggle').textContent = '🌙';
         }
+        
+        // Atualiza o ícone do botão baseado no estado carregado
+        updateThemeToggleIcon();
         
         // Preenche o menu suspenso com os dados salvos
         if (turmaSelecionada) {
@@ -288,5 +313,4 @@ function verificarFolgas() {
 
 window.onload = function() {
     verificarFolgas();
-
 };
